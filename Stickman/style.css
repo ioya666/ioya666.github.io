@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game {
+    margin-top: 800px;
+    
+}
+
+.returntomainscreen {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 30%;
+    position: absolute;
+}
+
+.returnbutton {
+    width: 45px;
+    font-size: 30px;
+    left: 35px;
+    top: 55px;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+}
