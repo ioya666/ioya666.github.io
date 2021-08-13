@@ -18,9 +18,11 @@ body{
 .returntomainscreen {
     width: 150px;
     height: 150px;
-    background-color: red;
+    background-color: white;
     border-radius: 30%;
     position: absolute;
+    margin: 0px 1290px 654px 0px;
+    opacity: 0.5;
 }
 
 .returnbutton {

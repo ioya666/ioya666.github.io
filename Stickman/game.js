@@ -1,7 +1,7 @@
 
 //Variabler.
-let headX = 400;
-let headY = 150;
+let headX = 720;
+let headY = 300;
 var movement = 5;
 var left = false;
 var right = false;
@@ -94,6 +94,31 @@ function draw() { //start af draw
   angleMode(DEGREES)
   rotate(-45)
   rect(-4,-7.5,8,15)
+  pop()
+
+  //boxing shorts
+  push()
+  translate(headX+5,headY+90)
+  stroke(0)
+  fill(173,216,230)
+  angleMode(DEGREES)
+  rotate(-25)
+  rect(-10,-12.5,20,25)
+  pop()
+  
+  push()
+  translate(headX-5,headY+90)
+  stroke(0)
+  fill(173,216,230)
+  angleMode(DEGREES)
+  rotate(25)
+  rect(-10,-12.5,20,25)
+  pop()
+
+  push()
+  fill(240,240,240)
+  stroke(0)
+  rect(headX-12.5,headY+75,25,10)
   pop()
   
   //variable for borders
