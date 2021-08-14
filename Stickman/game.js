@@ -1,5 +1,5 @@
 
-//Variabler.
+//Variables.
 let headX = 720;
 let headY = 300;
 var movement = 5;
@@ -10,7 +10,7 @@ var down = false;
 var borderX = 1440;
 var borderY = 800;
 
-function setup() { // starten af setup
+function setup() { // start of setup
   createCanvas(borderX, borderY);
 } // slutningen af setup
 
@@ -138,7 +138,7 @@ function draw() { //start af draw
 } 
 // end of draw
 
-function keyPressed() { // starten af keyPressed
+function keyPressed() { // start of keyPressed
   if (keyCode === LEFT_ARROW) {
     left = true;
   }
@@ -154,7 +154,7 @@ function keyPressed() { // starten af keyPressed
   return false;
 } // slutningen af KeyPressed
 
-function keyReleased() { // starten af keyReleased
+function keyReleased() { // start of keyReleased
   if (keyCode === LEFT_ARROW) {
     left = false;
   }
