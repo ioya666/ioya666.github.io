@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    padding: 0;
+    font-family: 'Klee One', cursive;
 }
 
 body{
@@ -8,11 +10,13 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./images/mainscreen.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/mainscreen.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -55,27 +59,10 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
-#game {
-    margin-top: 800px;
-    
-}
-
-.returntomainscreen {
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    border-radius: 30%;
-    position: absolute;
-    margin: 0px 1290px 654px 0px;
-    opacity: 0.5;
-}
-
-.returnbutton {
-    width: 45px;
-    font-size: 30px;
-    left: 35px;
-    top: 55px;
-    position: absolute;
-    text-decoration: none;
-    color: black;
+.canvasDiv {
+    width: 85%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -11,11 +11,12 @@ var borderX = 800;
 var borderY = 500;
 
 function setup() { // start of setup
-  createCanvas(borderX, borderY);
+  const Canvas = createCanvas(borderX, borderY);
+  Canvas.parent('canvasDiv');
 } // slutningen af setup
 
 function draw() { //start af draw
-  background(126,200,80);
+  background(1,50,32);
   
   if (left == true) {
     headX = headX - movement;
