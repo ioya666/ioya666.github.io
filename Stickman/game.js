@@ -7,8 +7,8 @@ var left = false;
 var right = false;
 var up = false;
 var down = false;
-var borderX = 1440;
-var borderY = 800;
+var borderX = 800;
+var borderY = 500;
 
 function setup() { // start of setup
   createCanvas(borderX, borderY);
