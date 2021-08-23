@@ -1,7 +1,7 @@
 
 //Variables.
-let headX = 720;
-let headY = 300;
+let headX = 400;
+let headY = 200;
 var movement = 5;
 var left = false;
 var right = false;
