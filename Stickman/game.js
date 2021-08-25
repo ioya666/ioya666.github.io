@@ -10,16 +10,23 @@ var right = false;
 var up = false;
 var down = false;
 var borderX = 70
-var borderY = -140
+var borderYa = 150
+var borderYb = 50
 var canvasX = innerWidth/2;
-var canvasY = innerWidth/3;
+var canvasY = innerHeight/2.5;
 
 function preload(){
   img = loadImage('../images/framestickman.png')
 }
-
+function windowResized(){
+  canvasX = innerWidth/2;
+  canvasY = innerHeight/2.5;
+  var Canvas = createCanvas(canvasX, canvasY);
+  Canvas.parent('canvasDiv');
+  
+}
 function setup() { // start of setup
-  const Canvas = createCanvas(canvasX, canvasY);
+  var Canvas = createCanvas(canvasX, canvasY);
   Canvas.parent('canvasDiv');
 } // slutningen af setup
 
@@ -137,11 +144,11 @@ function draw() { //start af draw
   if(headX-borderX < 0) {
     headX = borderX;
   }
-  if(headY+123 > canvasY) {
-    headY = canvasY-123;
+  if(headY+borderYa > canvasY) {
+    headY = canvasY-borderYa;
   }
-  if(headY-25 < 0) {
-    headY = 25;
+  if(headY-borderYb < 0) {
+    headY = borderYb;
   }
   
 } 

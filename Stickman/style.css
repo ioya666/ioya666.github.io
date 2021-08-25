@@ -87,6 +87,9 @@ nav img{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+.scroll{
+    display:none;
+}
 @media(max-width: 1440px){
     #canvasDiv{
         position: absolute;
@@ -114,4 +117,29 @@ nav img{
         text-align: center;
     }
 }
-    
+
+@media(max-width: 400px){
+    .text-box2{
+        width: 80%;
+        color: #111;
+        position: absolute;
+        top: 115%;
+        left: 50%;
+        padding-bottom: 40px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .header{
+
+    }
+    .scroll{
+        display:block;
+        color: #fff;
+        position: absolute;
+        top: 95%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 10px;
+    }
+}
