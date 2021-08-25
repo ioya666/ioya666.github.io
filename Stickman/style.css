@@ -66,17 +66,6 @@ nav img{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.canvasframe{
-    resize: both;
-    height: 550px;
-    width: 900px;
-    position: absolute;
-    top: 51%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
 .text-box1{
     color: #fff;
     position: absolute;
@@ -84,6 +73,7 @@ nav img{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-size: 30px;
 }
 .text-box1 h1{
     font-size: 40px;
@@ -97,3 +87,31 @@ nav img{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+@media(max-width: 1440px){
+    #canvasDiv{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .text-box1{
+        color: #fff;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 25px; 
+    }
+    .text-box2{
+        width: 20%;
+        color: #fff;
+        font-size: 15px;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+    

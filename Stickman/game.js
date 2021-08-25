@@ -1,5 +1,7 @@
 
+
 //Variables.
+let img;
 let headX = 400;
 let headY = 200;
 var movement = 5;
@@ -7,16 +9,22 @@ var left = false;
 var right = false;
 var up = false;
 var down = false;
-var borderX = 800;
-var borderY = 500;
+var borderX = 70
+var borderY = -140
+var canvasX = innerWidth/2;
+var canvasY = innerWidth/3;
+
+function preload(){
+  img = loadImage('../images/framestickman.png')
+}
 
 function setup() { // start of setup
-  const Canvas = createCanvas(borderX, borderY);
+  const Canvas = createCanvas(canvasX, canvasY);
   Canvas.parent('canvasDiv');
 } // slutningen af setup
 
 function draw() { //start af draw
-  background(1,50,32);
+  background(img);
   
   if (left == true) {
     headX = headX - movement;
@@ -122,15 +130,15 @@ function draw() { //start af draw
   rect(headX-12.5,headY+75,25,10)
   pop()
   
-  //variable for borders
-  if(headX+45 > borderX) {
-    headX = borderX-45;
+  //variable for canvas
+  if(headX+borderX > canvasX) {
+    headX = canvasX-borderX;
   }
-  if(headX-45 < 0) {
-    headX = 45;
+  if(headX-borderX < 0) {
+    headX = borderX;
   }
-  if(headY+123 > borderY) {
-    headY = borderY-123;
+  if(headY+123 > canvasY) {
+    headY = canvasY-123;
   }
   if(headY-25 < 0) {
     headY = 25;
