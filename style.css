@@ -71,6 +71,15 @@ nav img{
 .text-box p{
     font-size: 28px;
 }
+.stickmaninfo {
+    color: #111;
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 200px;
+}
 
 @media(max-width: 1440px){
     .text-box h1{
