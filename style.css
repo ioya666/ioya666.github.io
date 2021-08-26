@@ -80,6 +80,16 @@ nav img{
     text-align: center;
     padding-bottom: 200px;
 }
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(16, 16, 17);
+    color: white;
+    opacity: 80%;
+    text-align: center;
+}
 
 @media(max-width: 1440px){
     .text-box h1{
