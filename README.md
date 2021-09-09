@@ -1,2 +1,2 @@
 # ioya666.github.io
-du lugter aok o ok ok ok ok ok ok ok 
+--X For authenticated personel only X--
