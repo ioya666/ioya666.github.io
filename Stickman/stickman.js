@@ -22,12 +22,12 @@ function windowResized() {
   canvasX = innerWidth / 2;
   canvasY = innerHeight / 2.5;
   var Canvas = createCanvas(canvasX, canvasY);
-  Canvas.parent('canvasDiv');
+  Canvas.parent('stickmanDiv');
 
 }
 function setup() { // start of setup
   var Canvas = createCanvas(canvasX, canvasY);
-  Canvas.parent('canvasDiv');
+  Canvas.parent('stickmanDiv');
 } // slutningen af setup
 
 function draw() { //start af draw
