@@ -12,18 +12,18 @@ var down = false;
 var borderX = 70
 var borderYa = 150
 var borderYb = 50
-var canvasX = innerWidth/2;
-var canvasY = innerHeight/2.5;
+var canvasX = innerWidth / 2;
+var canvasY = innerHeight / 2.5;
 
-function preload(){
+function preload() {
   img = loadImage('../images/framestickman.png')
 }
-function windowResized(){
-  canvasX = innerWidth/2;
-  canvasY = innerHeight/2.5;
+function windowResized() {
+  canvasX = innerWidth / 2;
+  canvasY = innerHeight / 2.5;
   var Canvas = createCanvas(canvasX, canvasY);
   Canvas.parent('canvasDiv');
-  
+
 }
 function setup() { // start of setup
   var Canvas = createCanvas(canvasX, canvasY);
@@ -32,7 +32,7 @@ function setup() { // start of setup
 
 function draw() { //start af draw
   background(img);
-  
+
   if (left == true) {
     headX = headX - movement;
   }
@@ -68,90 +68,90 @@ function draw() { //start af draw
   stroke(255, 5, 0);
   triangle(headX, headY + 10, headX - 8, headY + 15, headX + 8, headY + 15);
   pop();
-  
+
   //body
   push()
   strokeWeight(4)
-  line(headX,headY+21,headX,headY+80)
+  line(headX, headY + 21, headX, headY + 80)
   //rightarm
-  line(headX,headY+28,headX+20,headY+50)
+  line(headX, headY + 28, headX + 20, headY + 50)
   //leftarm
-  line(headX,headY+28,headX-20,headY+50)
+  line(headX, headY + 28, headX - 20, headY + 50)
   //rightleg
-  line(headX,headY+80,headX+20,headY+120)
+  line(headX, headY + 80, headX + 20, headY + 120)
   //leftleg
-  line(headX,headY+80,headX-20,headY+120)
+  line(headX, headY + 80, headX - 20, headY + 120)
   pop()
-  
-  
+
+
   //boxing gloves
   push()
-  fill(255,0,0)
-  stroke(255,0,0)
-  circle(headX+30,headY+60,20)
-  circle(headX-30,headY+60,20)
+  fill(255, 0, 0)
+  stroke(255, 0, 0)
+  circle(headX + 30, headY + 60, 20)
+  circle(headX - 30, headY + 60, 20)
   pop()
-  
-  
+
+
   //boxing gloves accessories
   push()
-  fill(48,24,0)
-  translate(headX+22, headY+52);
+  fill(48, 24, 0)
+  translate(headX + 22, headY + 52);
   stroke(0)
   angleMode(DEGREES)
   rotate(45)
-  rect(-4,-7.5,8,15)
+  rect(-4, -7.5, 8, 15)
   pop()
-  
+
   push()
-  fill(48,24,0)
-  translate(headX-22, headY+52);
+  fill(48, 24, 0)
+  translate(headX - 22, headY + 52);
   stroke(0)
   angleMode(DEGREES)
   rotate(-45)
-  rect(-4,-7.5,8,15)
+  rect(-4, -7.5, 8, 15)
   pop()
 
   //boxing shorts
   push()
-  translate(headX+5,headY+90)
+  translate(headX + 5, headY + 90)
   stroke(0)
-  fill(173,216,230)
+  fill(173, 216, 230)
   angleMode(DEGREES)
   rotate(-25)
-  rect(-10,-12.5,20,25)
-  pop()
-  
-  push()
-  translate(headX-5,headY+90)
-  stroke(0)
-  fill(173,216,230)
-  angleMode(DEGREES)
-  rotate(25)
-  rect(-10,-12.5,20,25)
+  rect(-10, -12.5, 20, 25)
   pop()
 
   push()
-  fill(240,240,240)
+  translate(headX - 5, headY + 90)
   stroke(0)
-  rect(headX-12.5,headY+75,25,10)
+  fill(173, 216, 230)
+  angleMode(DEGREES)
+  rotate(25)
+  rect(-10, -12.5, 20, 25)
   pop()
-  
+
+  push()
+  fill(240, 240, 240)
+  stroke(0)
+  rect(headX - 12.5, headY + 75, 25, 10)
+  pop()
+
   //variable for canvas
-  if(headX+borderX > canvasX) {
-    headX = canvasX-borderX;
+  if (headX + borderX > canvasX) {
+    headX = canvasX - borderX;
   }
-  if(headX-borderX < 0) {
+  if (headX - borderX < 0) {
     headX = borderX;
   }
-  if(headY+borderYa > canvasY) {
-    headY = canvasY-borderYa;
+  if (headY + borderYa > canvasY) {
+    headY = canvasY - borderYa;
   }
-  if(headY-borderYb < 0) {
+  if (headY - borderYb < 0) {
     headY = borderYb;
   }
-  
-} 
+
+}
 // end of draw
 
 function keyPressed() { // start of keyPressed
