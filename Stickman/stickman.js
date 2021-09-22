@@ -155,32 +155,32 @@ function draw() { //start af draw
 // end of draw
 
 function keyPressed() { // start of keyPressed
-  if (keyCode === LEFT_ARROW) {
+  if (keyCode === 65) {
     left = true;
   }
-  if (keyCode === RIGHT_ARROW) {
+  if (keyCode === 68) {
     right = true;
   }
-  if (keyCode === UP_ARROW) {
+  if (keyCode === 87) {
     up = true;
   }
-  if (keyCode === DOWN_ARROW) {
+  if (keyCode === 83) {
     down = true;
   }
   return false;
 } // slutningen af KeyPressed
 
 function keyReleased() { // start of keyReleased
-  if (keyCode === LEFT_ARROW) {
+  if (keyCode === 65) {
     left = false;
   }
-  if (keyCode === RIGHT_ARROW) {
+  if (keyCode === 68) {
     right = false;
   }
-  if (keyCode === UP_ARROW) {
+  if (keyCode === 87) {
     up = false;
   }
-  if (keyCode === DOWN_ARROW) {
+  if (keyCode === 83) {
     down = false;
   }
 } // slutningen af keyReleased
