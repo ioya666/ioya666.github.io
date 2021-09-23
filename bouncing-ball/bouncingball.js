@@ -4,15 +4,13 @@ var canvasY = innerHeight / 2.5;
 var radius = 25
 var ballX = canvasX / 2;
 var ballY = canvasY / 2;
-var xSpeed = 10;
-var ySpeed = 10;
+var xSpeed = 3;
+var ySpeed = 3;
 var resizeSpeed = 5/2
-var multiSpeed
-var pastRightBorder = canvasX < ballX - radius;
-var pastLeftBorder = 0 > ballX + radius;
+
 //start of preload
 function preload() {
-    img = loadImage('./images/bouncingballbackground.jpg')
+    img = loadImage('../images/bouncingballbackground.jpg')
 }
 //end of preload
 
