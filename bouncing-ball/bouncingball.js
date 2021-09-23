@@ -1,11 +1,16 @@
 //variables
-var canvasX = innerWidth;
-var canvasY = innerHeight;
-var diameter = 50;
-var ballX = 980;
-var ballY = 540;
-var speed = 2;
-
+var canvasX = innerWidth / 2;
+var canvasY = innerHeight / 2.5;
+var diameter = radius * 2;
+var radius = 25
+var ballX = canvasX / 2;
+var ballY = canvasY / 2;
+var xSpeed = 2;
+var ySpeed = 2;
+var resizeSpeed = 5
+var multiSpeed
+var pastRightBorder = canvasX < ballX - radius;
+var pastLeftBorder = 0 > ballX + radius;
 //start of preload
 function preload() {
     img = loadImage('../images/bouncingballbackground.jpg')
@@ -14,9 +19,8 @@ function preload() {
 
 //start of responsiveness
 function windowResized() {
-    canvasX = innerWidth;
-    canvasY = innerHeight;
-    var Canvas = createCanvas(canvasX, canvasY);
+    canvasX = innerWidth / 2;
+    canvasY = innerHeight / 2.5;
     Canvas.parent('bouncingballDiv');
 }
 //end of responsiveness
@@ -24,36 +28,33 @@ function windowResized() {
 // start of setup
 function setup() {
     var Canvas = createCanvas(canvasX, canvasY);
-    Canvas.parent('bouncingballDiv');ß
+    Canvas.parent('bouncingballDiv');
 }
 // end of setup
 
 //start of draw 
 function draw() {
-    var pastRightEdge = canvasX < ballX + diameter;
-    var pastLeftEdge = 0 > ballX + diameter;
-    var belowBottom = canvasY < ballY + diameter;
-    var aboveTop = 0 > ballY - diameter;
+background(img)
+if (keyIsDown(81)) {
+    diameter -= resizeSpeed;
+}
+if (keyIsDown(69)) {
+    diameter += resizeSpeed;
+}
 
-    ballX = ballX + speed
-
-    if (pastRightEdge || pastLeftEdge) {
-        speed = -speed
-    }
-    if (aboveTop || belowBottom) {
-        speed = -speed
-    }
-    clear()
     fill(255, 0, 0)
     circle(ballX, ballY, diameter)
-    pop()
-    if (keyIsDown(81) || keyIsDown(81)) {
-        diameter -= 2;
+
+ballX = ballX + xSpeed
+ballY = ballY + ySpeed
+    
+    if (canvasX < ballX - radius || 0 > ballX + radius) {
+        xSpeed = -xSpeed
     }
-    if (keyIsDown(69) || keyIsDown(69)) {
-        diameter += 2;
+    if (0 > ballY - radius || canvasY < ballY + radius) {
+        ySpeed = -ySpeed
     }
-    push()
+    
 }
 
 //end of draw
