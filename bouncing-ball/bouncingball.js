@@ -1,19 +1,18 @@
 //variables
 var canvasX = innerWidth / 2;
 var canvasY = innerHeight / 2.5;
-var diameter = radius * 2;
 var radius = 25
 var ballX = canvasX / 2;
 var ballY = canvasY / 2;
-var xSpeed = 2;
-var ySpeed = 2;
-var resizeSpeed = 5
+var xSpeed = 10;
+var ySpeed = 10;
+var resizeSpeed = 5/2
 var multiSpeed
 var pastRightBorder = canvasX < ballX - radius;
 var pastLeftBorder = 0 > ballX + radius;
 //start of preload
 function preload() {
-    img = loadImage('../images/bouncingballbackground.jpg')
+    img = loadImage('./images/bouncingballbackground.jpg')
 }
 //end of preload
 
@@ -34,25 +33,42 @@ function setup() {
 
 //start of draw 
 function draw() {
-background(img)
-if (keyIsDown(81)) {
-    diameter -= resizeSpeed;
-}
-if (keyIsDown(69)) {
-    diameter += resizeSpeed;
-}
+    background(img)
 
-    fill(255, 0, 0)
-    circle(ballX, ballY, diameter)
-
-ballX = ballX + xSpeed
-ballY = ballY + ySpeed
-    
-    if (canvasX < ballX - radius || 0 > ballX + radius) {
-        xSpeed = -xSpeed
+    if (keyIsDown(81)) {
+        if (radius > 5) {
+            radius -= resizeSpeed;
+        }
     }
-    if (0 > ballY - radius || canvasY < ballY + radius) {
-        ySpeed = -ySpeed
+
+    if (keyIsDown(69)) {
+        if (radius < 100) {
+            radius += resizeSpeed;
+        }
+    }
+
+    ballX = ballX + xSpeed;
+    ballY = ballY + ySpeed;
+
+    fill(255, 0, 0);
+    circle(ballX, ballY, radius*2);
+
+    if (canvasX < ballX + radius) {
+        ballX = canvasX - radius;
+        xSpeed = -xSpeed;
+    }
+    if (0 > ballX - radius) {
+        ballX = 0 + radius;
+        xSpeed = -xSpeed;
+    }
+
+    if (canvasY < ballY + radius) {
+        ballY = canvasY - radius;
+        ySpeed = -ySpeed;
+    }
+    if (0 > ballY - radius) {
+        ballY = 0 + radius;
+        ySpeed = -ySpeed;
     }
     
 }
