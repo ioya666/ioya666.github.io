@@ -1,5 +1,7 @@
-.gameinfo {
+body{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: column;
+}
+.gameinfo{
+    width: 50%;
 }
