@@ -10,7 +10,7 @@ var resizeSpeed = 5/2
 
 //start of preload
 function preload() {
-    img = loadImage('../images/bouncingballbackground.jpg')
+    img = loadImage('../../images/bouncingballbackground.jpg')
 }
 //end of preload
 
@@ -44,7 +44,7 @@ function draw() {
             radius += resizeSpeed;
         }
     }
-
+   
     ballX = ballX + xSpeed;
     ballY = ballY + ySpeed;
 

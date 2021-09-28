@@ -16,7 +16,7 @@ var canvasX = innerWidth / 2;
 var canvasY = innerHeight / 2.5;
 
 function preload() {
-  img = loadImage('../images/framestickman.png')
+  img = loadImage('../../images/framestickman.png')
 }
 function windowResized() {
   canvasX = innerWidth / 2;
