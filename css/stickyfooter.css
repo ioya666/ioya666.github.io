@@ -1,0 +1,10 @@
+.stickyfooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(16, 16, 17);
+    color: white;
+    opacity: 80%;
+    text-align: center;
+}
