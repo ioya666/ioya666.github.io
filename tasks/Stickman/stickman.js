@@ -1,7 +1,7 @@
 
 
 //Variables.
-let img;
+
 let headX = 400;
 let headY = 200;
 var movement = 5;

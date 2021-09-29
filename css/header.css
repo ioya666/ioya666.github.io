@@ -44,6 +44,13 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+#noeffects:hover::after{
+    display: none;
+    width: 0%;
+    transition: none;
+    background: none;
+    align-items: left;
+}
 .text-box{
     width: 85%;
     color: #fff;
@@ -57,5 +64,20 @@ nav img{
     font-size: 62px;
 }
 .text-box p{
+    font-size: 28px;
+}
+.text-box2{
+    width: 85%;
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box2 h1{
+    font-size: 62px;
+}
+.text-box2 p{
     font-size: 28px;
 }

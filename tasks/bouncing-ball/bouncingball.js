@@ -18,6 +18,7 @@ function preload() {
 function windowResized() {
     canvasX = innerWidth / 2;
     canvasY = innerHeight / 2.5;
+    var Canvas = createCanvas(canvasX, canvasY);
     Canvas.parent('bouncingballDiv');
 }
 //end of responsiveness
