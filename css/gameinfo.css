@@ -5,6 +5,15 @@ body{
 section{
     display: block;
     margin: 15em;
+    margin-top: 10vh;
+    width: 50%;
+}
+h1 p{
+    margin-top: 10vh;
+    width: 50%;
+    text-align: center;
+    margin-left: 50px;
+    padding-left: 10vh;
 }
 #stickmanDiv{
     position: absolute;
@@ -12,19 +21,8 @@ section{
     top: 50%;
     left: 50%;
 }
-.gismp{
-    margin-top: 10vh;
-    width: 50%;
-}
 .gismc1{
     right: 25%;
-}
-.gismc1 h1 p{
-    padding-left: 10vh;
-    text-align: center;
-    margin-left: 50px;
-}
-.gismc1 p{
 }
 .gismimg{
     right: 50%;
@@ -35,21 +33,15 @@ section{
     top: 50%;
     left: 50%;
 }
-.gibbp{
-    margin-top: 10vh;
-    width: 50%;
-}
 .gibbpc1{
     right: 25%;
 }
-.gibbpc1 h1{
-    text-align: center;
-    margin-left: 50px;
-}
-.gibbpc1 p{
-    text-align: center;
-    margin-left: 50px;
-}
 .gibbimg{
     right: 50%;
+}
+#logicalDiv{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
