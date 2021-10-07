@@ -1,18 +1,9 @@
-//variables
 var canvasX = 800
 var canvasY = 400
-var speedX = 2
-var speedY = 3
-var fr = 60
-//horizontal
-var lineaX1 = canvasY
-var lineaX2 = 0
-var lineH = lineaX1 && lineaX2
-//vertical
-var linebY1 = canvasY
-var linebY2 = 0
-var lineY = linebY1 && linebY2
-
+var lineX = canvasX / 2; 
+var lineY = canvasY / 2;
+var speedX = 2;
+var speedY = 2;
 
 
 //start of preload
@@ -23,8 +14,8 @@ function preload() {
 
 //start of responsiveness
 function windowResized() {
-    canvasX
-    canvasY 
+    var canvasX = 800
+    var canvasY = 400
     var Canvas = createCanvas(canvasX, canvasY);
     Canvas.parent('logicalDiv');
 }
@@ -32,65 +23,53 @@ function windowResized() {
 
 // start of setup
 function setup() {
-    frameRate(fr)
+    var canvasX = 800
+    var canvasY = 400
     var Canvas = createCanvas(canvasX, canvasY);
     Canvas.parent('logicalDiv');
 }
 // end of setup
 
 //start of draw 
-function draw() {
+function draw(){
     background(img)
-
     strokeWeight(8)
-    stroke(255,255,255)
-    line(canvasX,lineH,0,lineH) // horizontal line
-    line(lineY,canvasX,lineY,0) // vertical line
-
     
-    lineH = lineH + speedX;
-    lineY = lineY + speedY
+    line(0,lineY,canvasX,lineY) // horizontal line
+    line(lineX,0,lineX,canvasY) // vertical line   
+    lineX = lineX + speedX;
+    lineY = lineY + speedY;
     
-    //vertical line
-    if(canvasX < lineY){
-        lineY = canvasX;
-        speedY = -speedY;
+    //vert // (statement) ?=if  what if should do if statement == true  :=else what else should do
+    lineX > canvasX ? (lineX = canvasX, speedX = -speedX):
+    lineX < 0 ? (lineX = 0, speedX = -speedX): 0;
+    lineY > canvasY ? (lineY = canvasY, speedY = -speedY):
+    lineY < 0 ? (lineY = 0, speedY = -speedY):
+    // optimized code that only checks a statement if it needs it // help from Fl3xy
+    mouseX < lineX && mouseY > lineY ? (square(mouseX - 20, mouseY -20, 40), fill(46,26,71),stroke(46,26,71)):
+    mouseX > lineX && mouseY > lineY ? (triangle(mouseX,mouseY-15,mouseX-15,mouseY+15,mouseX+15,mouseY+15),fill(173,216,230),stroke(173,216,230)):
+    mouseX < lineX && mouseY < lineY ? (circle(mouseX,mouseY,40),fill(197,180,227),stroke(197,180,227)):
+    mouseX > lineX && mouseY < lineY ? (line(mouseX-15,mouseY+15,mouseX+15,mouseY-15),line(mouseX-15,mouseY-15,mouseX+15,mouseY+15),fill(25, 25, 112),stroke(25, 25, 112)): 0; 
+    
+    if (keyIsDown(69) && speedX >= 0) {
+        speedX += 1
+    } else if (keyIsDown(69) && speedX <= 0) {
+        speedX -= 1
     }
-    if(0 > lineY){
-        lineY = 0;
-        speedY = -speedY;
+    if (keyIsDown(69) && speedY >= 0) {
+        speedY += 1
+    } else if (keyIsDown(69) && speedY <= 0) {
+        speedY -= 1
     }
-    //horizontal line
-    if(canvasY < lineH){
-        lineH = canvasY;
-        speedX = -speedX;
+    if (keyIsDown(81) && speedX >= 0) {
+        speedX -= 1
+    } else if (keyIsDown(81) && speedX <= 0) {
+        speedX += 1
     }
-    if(0> lineH){
-        lineH = 0;
-        speedX = -speedX;
+    if (keyIsDown(81) && speedY >= 0) {
+        speedY -= 1
+    } else if (keyIsDown(81) && speedY <= 0) {
+        speedY += 1
     }
-    if(mouseX && mouseY > lineH){
-        strokeWeight(1)
-        fill(255,255,0)
-        stroke(0,0,0)
-        square(mouseX-20,mouseY-20,40)
-    } else {
-        strokeWeight(1)
-        fill(255,0,255)
-        stroke(0,0,0)
-        circle(mouseX,mouseY,40)
-    }
-    if(mouseX && mouseY > lineY){
-        strokeWeight(1)
-        fill(255,255,0)
-        stroke(0,0,0)
-        square(mouseX-20,mouseY-20,40)
-    } else {
-        strokeWeight(1)
-        fill(255,0,255)
-        stroke(0,0,0)
-        circle(mouseX,mouseY,40)
-    }
-
-// end of draw
+    // end of draw
 }
