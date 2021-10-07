@@ -40,17 +40,17 @@ function draw(){
     lineX = lineX + speedX;
     lineY = lineY + speedY;
     
-    //vert // (statement) ?=if  what if should do if statement == true  :=else what else should do
+    // (statement) ?=if  what if should do if statement == true  :=else what else should do
     lineX > canvasX ? (lineX = canvasX, speedX = -speedX):
     lineX < 0 ? (lineX = 0, speedX = -speedX): 0;
     lineY > canvasY ? (lineY = canvasY, speedY = -speedY):
     lineY < 0 ? (lineY = 0, speedY = -speedY):
-    // optimized code that only checks a statement if it needs it // help from Fl3xy
+    // && = and
     mouseX < lineX && mouseY > lineY ? (square(mouseX - 20, mouseY -20, 40), fill(46,26,71),stroke(46,26,71)):
     mouseX > lineX && mouseY > lineY ? (triangle(mouseX,mouseY-15,mouseX-15,mouseY+15,mouseX+15,mouseY+15),fill(173,216,230),stroke(173,216,230)):
     mouseX < lineX && mouseY < lineY ? (circle(mouseX,mouseY,40),fill(197,180,227),stroke(197,180,227)):
     mouseX > lineX && mouseY < lineY ? (line(mouseX-15,mouseY+15,mouseX+15,mouseY-15),line(mouseX-15,mouseY-15,mouseX+15,mouseY+15),fill(25, 25, 112),stroke(25, 25, 112)): 0; 
-    
+    // optimized code that only checks a statement if it needs it // help from Fl3xy
     if (keyIsDown(69) && speedX >= 0) {
         speedX += 1
     } else if (keyIsDown(69) && speedX <= 0) {
