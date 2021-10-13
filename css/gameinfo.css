@@ -45,3 +45,10 @@ h1 p{
     top: 50%;
     left: 50%;
 }
+#loopDiv{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
