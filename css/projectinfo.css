@@ -1,0 +1,17 @@
+body{
+    display: relative;
+    flex-direction: column;
+}
+section{
+    display: block;
+    margin: 15em;
+    margin-top: 10vh;
+    width: 50%;
+}
+h1 p{
+    margin-top: 10vh;
+    width: 50%;
+    text-align: center;
+    margin-left: 50px;
+    padding-left: 10vh;
+}
