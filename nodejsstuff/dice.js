@@ -16,7 +16,7 @@ for(var i = 0; i < DiceThrows; i++) {
         }
     }
 }
-
+// Draw a flexible diagram that changes based on 
 console.log("You have hit the following numbers these amount of times:")
 for(var k in CountingArr) {
     var number = parseInt(k);
