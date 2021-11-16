@@ -17,8 +17,6 @@ function setup() {
 }
 function reset() {
     linesarr = [];
-    let lines = new Lines(-5, -5, -5, -5);
-    linesarr.push(lines);
 }
 function draw() {
     stroke(0, 255, 0)
@@ -41,6 +39,10 @@ function draw() {
         }
     }
 
+}
+function mousePressed(){
+    lines = new Lines(-5,-5,-5,-5);
+    linesarr.push(lines);
 }
 function mouseReleased() {
     endBool = true;

@@ -22,12 +22,12 @@ function windowResized() {
   Canvas.parent('stickmanDiv');
 
 }
-function setup() { // start of setup
+function setup() {
   var Canvas = createCanvas(canvasX, canvasY);
   Canvas.parent('stickmanDiv');
-} // slutningen af setup
+}
 
-function draw() { //start af draw
+function draw() {
   background(img);
 
   if (left == true) {
@@ -134,7 +134,6 @@ function draw() { //start af draw
   rect(headX - 12.5, headY + 75, 25, 10)
   pop()
 
-  //variable for canvas
   if (headX + borderX > canvasX) {
     headX = canvasX - borderX;
   }
@@ -149,9 +148,8 @@ function draw() { //start af draw
   }
 
 }
-// end of draw
 
-function keyPressed() { // start of keyPressed
+function keyPressed() {
   if (keyCode === 65) {
     left = true;
   }
@@ -165,9 +163,9 @@ function keyPressed() { // start of keyPressed
     down = true;
   }
   return false;
-} // slutningen af KeyPressed
+}
 
-function keyReleased() { // start of keyReleased
+function keyReleased() {
   if (keyCode === 65) {
     left = false;
   }
@@ -180,4 +178,4 @@ function keyReleased() { // start of keyReleased
   if (keyCode === 83) {
     down = false;
   }
-} // slutningen af keyReleased
+}
